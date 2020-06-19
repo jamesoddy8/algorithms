@@ -37,4 +37,17 @@ Simple search could take 240,000 steps if the word you were looking for is the v
 
 18 STEPS in total
 
-So binary search will take 18 steps - a big difference! In general, for 
+So binary search will take 18 steps - a big difference! In general, for any list of *n*, binary search will take log2 *n* steps to run in the worst case, whereas simple search will take *n* steps. 
+
+## Logarithms 
+
+You may not remember what logarithms are, but you probably know what exponentials are. log10 100 is like asking, "How many 10s do we multiply together to get 100? The answer is 2: 10x10. So log10 100 = 2. Logs are the flip of exponentials. 
+|Exponentials|Logs|
+|---|---|
+|10^2 = 100|log10 100 = 2|
+|10^3 = 1000|log10 1000 = 3|
+|2^3 = 8|log2 8 = 3|
+|2^4 = 16|log2 16 = 4|
+|2^5 = 32|log2 32 = 5|
+
+When running time in Big O notation, log always means log2. When you search for an element using simple search, in the worst case you might have to look at every single element. So for a list of 8 numbers, you'd have to check 8 numbers at most. For binary search, you have to check log n elements in the worst case. For a list of elements, log 8 == 3, because 2^3 == 8. So for a list of 8 numbers you would haev to check 3 numbers at most. For a list of 1024 elements, log 1024 = 10, because 2^10 ===
