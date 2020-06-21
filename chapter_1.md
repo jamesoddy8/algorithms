@@ -50,4 +50,8 @@ You may not remember what logarithms are, but you probably know what exponential
 |2^4 = 16|log2 16 = 4|
 |2^5 = 32|log2 32 = 5|
 
-When running time in Big O notation, log always means log2. When you search for an element using simple search, in the worst case you might have to look at every single element. So for a list of 8 numbers, you'd have to check 8 numbers at most. For binary search, you have to check log n elements in the worst case. For a list of elements, log 8 == 3, because 2^3 == 8. So for a list of 8 numbers you would haev to check 3 numbers at most. For a list of 1024 elements, log 1024 = 10, because 2^10 ===
+When running time in Big O notation, log always means log2. When you search for an element using simple search, in the worst case you might have to look at every single element. So for a list of 8 numbers, you'd have to check 8 numbers at most. For binary search, you have to check log n elements in the worst case. For a list of elements, log 8 == 3, because 2^3 == 8. So for a list of 8 numbers you would haev to check 3 numbers at most. For a list of 1024 elements, log 1024 = 10, because 2^10 == 1024. So for a list of 1024 numbers, you'd have to check 10 numbers at most. 
+
+Binary search only works when your list is in sorted order. For example, the names in a phone book are sorted in alphabetical order, so you can use binary search to look for a name. 
+
+The ```binary_search``` function takes a sorted array and an item. If the item is in the array, the function returns its position. You'll keep track of what part of the array you have to search through. At the beginning, this is the entire array: 
