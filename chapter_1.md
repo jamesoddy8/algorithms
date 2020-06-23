@@ -55,3 +55,32 @@ When running time in Big O notation, log always means log2. When you search for 
 Binary search only works when your list is in sorted order. For example, the names in a phone book are sorted in alphabetical order, so you can use binary search to look for a name. 
 
 The ```binary_search``` function takes a sorted array and an item. If the item is in the array, the function returns its position. You'll keep track of what part of the array you have to search through. At the beginning, this is the entire array: 
+
+Each time, you check the middle element: 
+
+mid = (low + high) / 2 
+guess = list(mid) 
+
+mid is rounded down by python automatically if (low + high) isn't an even number. 
+
+If the guess is too low, you update low accordingly. 
+
+if guess < item: 
+  low = mid + 1
+  
+And if the guess is too high, you update high. Here's the full code: 
+
+### Running time
+
+Any time an algorithm is mentioned, its running time will be discussed. Generally you want to choose the most efficient algorithm - whether you're trying to optimise for time or space. 
+
+How much time is saved by using binary search? Well with the first approach, checking each number one by one, the maximum number of guesses is the same as the size of the list. This is called linear time. 
+
+Binary search is different. If the list is 100 items long, it takes at most 7 guesses. If the list is 4 billion items, it takes at most 32 guesses. Binary search runs in logarithmic time (or log time, as the natives call it). Here's a table summarising the difference between linear and logarithmic time. 
+
+|Simple Search|Binary Search|
+|---|---|
+|100 items -> 100 guesses|100 items -> 7 guesses|
+|4,000,000,000 items -> 4,000,000,000 guesses|4,000,000,000 items -> 32 guesses|
+|O(n) - linear time|O(log n) - logarithmic time|
+
