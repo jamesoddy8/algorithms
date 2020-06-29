@@ -84,3 +84,18 @@ Binary search is different. If the list is 100 items long, it takes at most 7 gu
 |4,000,000,000 items -> 4,000,000,000 guesses|4,000,000,000 items -> 32 guesses|
 |O(n) - linear time|O(log n) - logarithmic time|
 
+|    |Simple Search|Binary Search|
+|---|---|---|
+100 elements|100ms|7ms|
+10,000 elements|10 seconds|14ms|
+1,000,000,000 elements|11 days|32ms|
+
+As the list of numbers gets bigger, binary search suddenly becomes a lot faster than simple search. 
+
+Big O notation tells you how fast an algorithm is. The run time in Big O notation is O(n), where are the seconds? There are none, Big O doesn't tell you the speed in seconds. Big O notation lets you compare the number of opertions. It tells you how fast the algorithm grows. 
+
+```"Big O" -> O (n) <- Number of operations```
+
+### Big O establishes a worst-case run time
+
+
